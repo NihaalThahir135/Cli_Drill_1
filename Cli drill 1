@@ -1,0 +1,80 @@
+Question 1 : Create the following directory structure. (Create empty files where necessary)
+
+hello
+├── five
+│   └── six
+│       ├── c.txt
+│       └── seven
+│           └── error.log
+└── one
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+                └── access.log
+                
+Answer to Question 1 :
+  mkdir hello
+  cd hello
+  mkdir five
+  cd five
+  mkdir six
+  cd six
+  touch c.txt
+  mkdir seven
+  cd seven
+  touch error.log
+  cd ..
+  cd ..
+  cd ..
+  mkdir one
+  cd one
+  touch a.txt
+  touch b.txt
+  mkdir two 
+  cd two 
+  touch d.txt
+  mkdir three
+  cd three
+  touch e.txt
+  mkdir four
+  cd four
+  touch access.log
+  
+
+Question 2 : Delete all the files having the .log extension
+Answer to Question 2 :
+ find . -type f -iname \*.log -delete
+
+
+Question 3 : Add the following content to a.txt
+Unix is a family of multitasking, multiuser computer operating 
+systems that derive from the original AT&T Unix, development 
+starting in the 1970s at the Bell Labs research center by Ken 
+Thompson, Dennis Ritchie, and others.
+
+Answer to Question 3 :
+nano hello/one/a.txt
+Unix is a family of multitasking, multiuser computer operating 
+systems that derive from the original AT&T Unix, development 
+starting in the 1970s at the Bell Labs research center by Ken 
+Thompson, Dennis Ritchie, and others.
+
+
+Question 4 : Delete the directory named five.
+Answer to Question 4 :
+ cd hello
+ rm -r five
+
+
+Question 5 : Rename the one directory to uno.
+Answer to Question 5 :
+ mv one uno 
+
+
+Question 6 : Move a.txt to the two directory.
+Answer to Question 6 :
+ mv uno/a.txt uno/two/
